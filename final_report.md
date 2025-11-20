@@ -28,23 +28,32 @@ This means the model successfully flags **8 out of 10 churners**, providing the 
 - **27% Churn**
 
 This imbalance required focusing on Recall, Precision, and F1-Score instead of Accuracy.
+![Churn Distribution](images/Distribution_of_Churn.png)
 
 ### 2.2. Contract Type (Most Influential Feature)
 - Customers on **Month-to-month contracts** dominate the churn population.
 - **1-year** and **2-year** contracts show high customer stability.
 
+![Contract Type vs Churn](images/churn_by_contract.png)
+
 ### 2.3. Tenure
 - Churn is heavily concentrated among customers with **low tenure**, especially within the first 12 months.
+
+![Churn Distribution](images/tenure_churn.png)
 
 ### 2.4. Service-Related Factors
 - **Fiber Optic** users have higher churn rates.
 - Customers with **high monthly charges** are significantly more likely to cancel service.
+
+![Churn Distribution](images/churn_service.png)
 
 ### 2.5. Demographic Factors
 Higher churn likelihood was found in:
 - Senior citizens  
 - Customers without partners  
 - Customers without dependents  
+
+![Churn Distribution](images/correlation.png)
 
 These groups show lower long-term service commitment.
 
@@ -88,7 +97,22 @@ Observation: boosting models delivered the strongest Recall.
 ```
 These parameters provided the best balance between Recall, Precision, and stability.
 
-### 4.2. Threshold Optimization
+### 4.2. Feature Importance
+The model identified the following as the strongest churn predictors:
+ • High MonthlyCharges → biggest churn driver
+ • New customers (<12 months) are unstable and likely to leave
+ • Electronic check billing strongly predicts churn
+ • Month-to-month contracts → low commitment, easy to leave
+ • Senior citizens show slightly higher churn rates
+
+These insights can be used for:
+ • Better retention campaigns
+ • Adjusting pricing strategies
+ • Improving onboarding for new customers
+
+![Churn Distribution](images/top_churn_driver.png) 
+
+### 4.3. Threshold Optimization
 
 Instead of the default 0.50 threshold, multiple thresholds were tested to meet business objectives.
 
@@ -99,7 +123,7 @@ Instead of the default 0.50 threshold, multiple thresholds were tested to meet b
 
 Chosen Threshold: 0.5503
 
-### 4.3. Final Model Performance
+### 4.4. Final Model Performance
 
 Classification Report (Optimized Threshold 0.5503)
 
