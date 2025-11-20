@@ -28,13 +28,14 @@ This means the model successfully flags **8 out of 10 churners**, providing the 
 - **27% Churn**
 
 This imbalance required focusing on Recall, Precision, and F1-Score instead of Accuracy.
+
 ![Churn Distribution](images/Distribution_of_Churn.png)
 
 ### 2.2. Contract Type (Most Influential Feature)
 - Customers on **Month-to-month contracts** dominate the churn population.
 - **1-year** and **2-year** contracts show high customer stability.
 
-![Contract Type vs Churn](images/churn_by_contract.png)
+![Contract Type vs Churn](images/churn_by_service.png)
 
 ### 2.3. Tenure
 - Churn is heavily concentrated among customers with **low tenure**, especially within the first 12 months.
