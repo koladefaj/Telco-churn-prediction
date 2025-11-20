@@ -8,7 +8,7 @@
 
 ## 1. Executive Summary
 
-This report outlines the development and optimization of a machine learning model used to predict customer churn for a telecom company. Because customer loss results in significant revenue impact, the business objective was to **maximize Recall**—identifying as many potential churners as possible—while maintaining strong Precision to minimize unnecessary retention costs.
+This report outlines the development and optimization of a machine learning model used to predict customer churn for a telecom company. Because customer loss results in significant revenue impact, the business objective was to **maximize Recall** identifying as many potential churners as possible while maintaining strong Precision to minimize unnecessary retention costs.
 
 The final tuned **XGBoost Classifier** delivered outstanding business value:
 
@@ -103,27 +103,29 @@ Chosen Threshold: 0.5503
 
 Classification Report (Optimized Threshold 0.5503)
 
-Metric	     Class 0 (Non-Churn)	Class 1 (Churn)
-Precision	  0.91	                 0.58
-Recall	      0.77	                 0.80
-F1-Score	  0.83	                 0.67
+|Metric|	     Class 0 (Non-Churn)|	Class 1 (Churn)|
+|------|--------------------------|----------------|
+|Precision|	  0.91	              |   0.58         |
+|Recall	  |    0.77	              |   0.80         |
+|F1-Score	|  0.83	                | 0.67           |
 
 Confusion Matrix
 
-	        Pred 0	     Pred 1
-Actual 0	588	         173
-Actual 1	60	         236
+|	        |Pred 0	|     Pred 1|
+|---------|-------|-----------|
+|Actual 0	|588	   |      173 |
+|Actual 1	|60	     |    236   |
 
 The model successfully identifies 236 churners while misclassifying only 60.
 
-5. Business Impact and Recommendations
-5.1. Deployment Recommendation
+## 5. Business Impact and Recommendations
+### 5.1. Deployment Recommendation
 
 Deploy the XGBoost model using threshold = 0.5503.
 
 Integrate predictions into CRM or retention dashboards.
 
-5.2. Targeted Retention Strategy
+### 5.2. Targeted Retention Strategy
 
 Focus on customers who are:
 
@@ -137,7 +139,7 @@ Paying high monthly charges
 
 These groups show the highest churn probability.
 
-5.3. Monitor Program Costs
+### 5.3. Monitor Program Costs
 
 False Positives = 173 customers
 
@@ -145,7 +147,7 @@ Represents the cost of discounts or incentives offered unnecessarily
 
 Compare operational cost vs. revenue saved from retaining the 236 true churners
 
-6. Conclusion
+## 6. Conclusion
 
 The final XGBoost model provides a powerful, highly accurate churn prediction engine that aligns with business retention goals. By focusing on Recall and optimizing the classification threshold, the solution ensures that the company captures the maximum number of at-risk customers while maintaining operational efficiency.
 
