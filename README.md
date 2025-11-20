@@ -62,6 +62,8 @@ To predict churn for customers listed in data/new_customers.csv and save the res
 ```bash
 python predict_churn.py --input data/new_customers.csv --output data/predictions.csv
 ```
+---
+
 ## 📊 Model Performance Highlights
 The model is optimized to provide a high Recall for the Churn class (Class 1) to minimize False Negatives.
 
