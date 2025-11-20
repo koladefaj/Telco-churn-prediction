@@ -31,8 +31,8 @@ The final model is an **XGBoost Classifier** optimized for the **F1-Score** at a
 
 1.  **Clone the Repository:**
     ```bash
-    git clone <YOUR_REPO_URL>
-    cd <your-subfolder-name>
+    git clone https://github.com/koladefaj/Telco-churn-prediction
+    cd Telco-churn-prediction
     ```
 
 2.  **Install Dependencies:**
