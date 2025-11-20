@@ -85,20 +85,21 @@ Observation: boosting models delivered the strongest Recall.
   "colsample_bytree": 0.9,
   "scale_pos_weight": 2.7
 }
-
+```
 These parameters provided the best balance between Recall, Precision, and stability.
 
-4.2. Threshold Optimization
+### 4.2. Threshold Optimization
 
 Instead of the default 0.50 threshold, multiple thresholds were tested to meet business objectives.
 
-Setting	       Threshold	Recall	Precision	F1	    Use Case
-High Recall	    ~0.40	     0.83	  0.55	   0.66	    Aggressive retention
-Best F1	        0.5503	     0.80	  0.58	   0.67	    Balanced cost-effectiveness
+|Setting	       |Threshold	|Recall	|Precision	|F1	    |Use Case|
+|----------------|----------|-------|-----------|-------|--------|
+|High Recall	   | ~0.40	  |   0.83|	  0.55	  | 0.66	|   Aggressive retention|
+|Best F1	       | 0.5503	  |   0.80|	  0.58	  | 0.67	|    Balanced cost-effectiveness|
 
 Chosen Threshold: 0.5503
 
-4.3. Final Model Performance
+### 4.3. Final Model Performance
 
 Classification Report (Optimized Threshold 0.5503)
 
