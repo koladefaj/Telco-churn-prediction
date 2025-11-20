@@ -8,7 +8,7 @@
 
 ## 1. Executive Summary
 
-This report outlines the development and optimization of a machine learning model used to predict customer churn for a telecom company. Because customer loss results in significant revenue impact, the business objective was to **maximize Recall**—identifying as many potential churners as possible—while maintaining strong Precision to minimize unnecessary retention costs.
+This report outlines the development and optimization of a machine learning model used to predict customer churn for a telecom company. Because customer loss results in significant revenue impact, the business objective was to **maximize Recall** identifying as many potential churners as possible while maintaining strong Precision to minimize unnecessary retention costs.
 
 The final tuned **XGBoost Classifier** delivered outstanding business value:
 
