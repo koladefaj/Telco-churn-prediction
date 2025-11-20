@@ -1,0 +1,21 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore virtual env folders
+venv/
+env/
+
+# Ignore system files
+.DS_Store
+
+# Ignore all models except final model
+models/*.pkl
+!models/telco_churn_pipeline.pkl
+
+# Ignore large datasets (optional)
+data/*.zip
+data/*.rar
