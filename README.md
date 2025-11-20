@@ -62,3 +62,30 @@ To predict churn for customers listed in data/new_customers.csv and save the res
 ```bash
 python predict_churn.py --input data/new_customers.csv --output data/predictions.csv
 ```
+## 📊 Model Performance Highlights
+The model is optimized to provide a high Recall for the Churn class (Class 1) to minimize False Negatives.
+
+|Metric|Value|Comment|
+|------|-----|-------|
+|Optimal Threshold|≈0.5503|Threshold maximizing the F1-Score|
+|ROC AUC Score|(Output from final run)|Measure of model's ability to discriminate classes|
+|Class 1 Recall|(Output from final run)|Primary focus: Percentage of actual churners correctly identified|
+|Class 1 Precision|(Output from final run)|Percentage of predicted churners that actually churned|
+
+Configuration Details
+
+|Parameter|Value|Description|
+|---------|-----|-----------|
+|Model|XGBoost Classifier|Gradient Boosting Decision Trees|
+|scale_pos_weight|≈2.7|Used to weight the minority class (Churn) to prioritize Recall|
+|Test Split Ratio|15%|Used for final validation|
+
+
+## 💡 Exploratory Data Analysis (EDA) Insights
+Key findings from the analysis that drove feature engineering:
+
+1. Contract Type: Customers on Month-to-Month contracts exhibit the highest churn rates.
+
+2. Tenure: New customers (0-1 years tenure) are the highest-risk group, validating the is_new_customer feature.
+
+3. Senior Citizens: Customers flagged as Senior Citizens show a significantly higher propensity to churn.
